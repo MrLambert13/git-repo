@@ -66,7 +66,7 @@
 					sumP = getSumm(player);
 					sumD = getSumm(dealer);
 
-					if (sumD < 21) { //если удилера не перебор то сравниваем очки
+					if (sumD <= 21) { //если удилера не перебор то сравниваем очки
 						if(sumD > sumP) {
 						alert('Ты проиграл! ' + getStatus());
 						} else if (sumP == sumD) {
