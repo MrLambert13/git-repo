@@ -44,9 +44,6 @@
 				" || Дилер: " + dealer.join (' ') + ', Сумма: ' + getSumm (dealer));
 	}
 
-
-
-
 	do { // начало игры
 		var dealer = [getCart()];
 		var player = [getCart(), getCart()];
@@ -61,28 +58,29 @@
 			do {
 				var answer = prompt ( getStatus() + '. Ещё карту ? (1 - да, иначе - нет)');
 				if (answer == '1') {
-					player.push (getCart());
+					player.push (getCart()); // игрок набирает карту
 				} else {
 					while (getSumm(dealer) < 17) {
-						dealer.push (getCart());
+						dealer.push (getCart());  // дилер набирает карту
 					}
 					sumP = getSumm(player);
 					sumD = getSumm(dealer);
 
-					if (sumD < 21) {
+					if (sumD < 21) { //если удилера не перебор то сравниваем очки
 						if(sumD > sumP) {
 						alert('Ты проиграл! ' + getStatus());
 						} else if (sumP == sumD) {
 							alert('Ничья! ' + getStatus());
 						} else {
 							alert('Ты выиграл! ' + getStatus());
-						} else {
-							alert('Победа!  Дилер перебрал. ' + getStatus())
 						}
+					} else { //перебор у дилера
+							alert('Победа!  Дилер перебрал. ' + getStatus());
 					}
+					
 				}
 
-				sumP = getSumm(player);
+				sumP = getSumm(player); //прерываяния если игрок перебрал либо набрал блекджэк
 				if (sumP == 21) {
 					alert ("Блэкджек! Вы побеждаете!" + getStatus());
 					break;
@@ -93,12 +91,9 @@
 
 			} while	(answer == '1')
 
-			
 		}
-
-		
-
 		answer = prompt("Сыгрыем еще? (1 - да, иначе нет)");
-
+		
 	} while (answer == 1);
+
 </script>
