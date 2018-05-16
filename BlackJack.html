@@ -39,7 +39,12 @@
 		return sum;
 	}
 
-	var player = [getCart(), getCart()];
-	alert (getSumm (player));
+	function getStatus (arr) { //сообщение с наименование карт и суммы очков
+		alert ("Игрок: " + player.join (' ') + ', Сумма: ' + getSumm (player) +
+				" || Дилер: " + dealer.join (' ') + ', Сумма: ' + getSumm (dealer));
+	}
 
+	var dealer = [getCart()];
+	var player = [getCart(), getCart()];
+	getStatus();
 </script>
