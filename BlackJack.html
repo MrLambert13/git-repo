@@ -44,6 +44,9 @@
 				" || Дилер: " + dealer.join (' ') + ', Сумма: ' + getSumm (dealer));
 	}
 
+
+
+
 	do { // начало игры
 		var dealer = [getCart()];
 		var player = [getCart(), getCart()];
@@ -61,29 +64,36 @@
 					player.push (getCart());
 				} else {
 					while (getSumm(dealer) < 17) {
-						dealer.push (getCart);
+						dealer.push (getCart());
+					}
+					sumP = getSumm(player);
+					sumD = getSumm(dealer);
+
+					if (sumD < 21) {
+						if(sumD > sumP) {
+						alert('Ты проиграл! ' + getStatus());
+						} else if (sumP == sumD) {
+							alert('Ничья! ' + getStatus());
+						} else {
+							alert('Ты выиграл! ' + getStatus());
+						} else {
+							alert('Победа!  Дилер перебрал. ' + getStatus())
+						}
 					}
 				}
 
 				sumP = getSumm(player);
 				if (sumP == 21) {
-					alert ("Блэкджек! " + getSumm(player));
+					alert ("Блэкджек! Вы побеждаете!" + getStatus());
 					break;
 				} else if (sumP > 21) {
-					alert ("Перебор! " + getSumm(player));
+					alert ("Увы перебор! Вы проиграли" + getStatus());
 					break;
 				} 
 
 			} while	(answer == '1')
 
-			sumP = getSumm(player);
-			sumD = getSumm(dealer);
-
-			if(sumD > sumP) {
-				alert('Ты проиграл! ' + getSumm(player));
-			} else {
-				alert('Ты выиграл! ' + getSumm(player));
-			}
+			
 		}
 
 		
