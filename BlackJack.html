@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script>
+	//фунеция выбора из диапазона
+	function getRandomInt (min, max){
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	//список карт и получение одной рандомно
+	function getCart () {
+		var cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+		return cards [getRandomInt(0, cards.length - 1)];
+	}
+
+	//подсчет суммы карт на руках
+	function getSumm (arr) {
+		var sum= 0;
+		var i;
+
+		for (i = 0; i < arr.length; i++){  //сначала считаем всё кроме туза
+			if (arr[i] != 'A') {
+				if (!isNaN (arr[i])) {
+					sum = sum + parseInt (arr[i]);
+				} else {
+					sum = sum + 10;
+				}
+			}
+		} 
+
+		for (i = 0; i < arr.length; i++) { //теперь считаем тузы
+			if (arr[i] == 'A') {
+				if (sum > 10) {
+					sum++;
+				} else {
+					sum = sum +11;
+				}
+			}
+		}
+		
+		return sum;
+	}
+
+	var player = [getCart(), getCart()];
+	alert (getSumm (player));
+
+</script>
