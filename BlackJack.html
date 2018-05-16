@@ -40,11 +40,53 @@
 	}
 
 	function getStatus (arr) { //сообщение с наименование карт и суммы очков
-		alert ("Игрок: " + player.join (' ') + ', Сумма: ' + getSumm (player) +
+		return ("Игрок: " + player.join (' ') + ', Сумма: ' + getSumm (player) +
 				" || Дилер: " + dealer.join (' ') + ', Сумма: ' + getSumm (dealer));
 	}
 
-	var dealer = [getCart()];
-	var player = [getCart(), getCart()];
-	getStatus();
+	do {
+		var dealer = [getCart()];
+		var player = [getCart(), getCart()];
+		//var player = ['A', 'Q'];
+		var symP = 0;
+		var sumD = 0;
+		
+		if (getSumm(player) == 21) {
+			alert ('WOW! БлэкДжэк с раздачи! Да ты невероятно везучь! ' + getStatus());
+		} else {
+			
+			do {
+				var answer = prompt ( getStatus() + '. Ещё карту ? (1 - да, иначе - нет)');
+				if (answer == '1') {
+					player.push (getCart());
+				} else {
+					while (getSumm(dealer) < 17) {
+						dealer.push (getCart);
+					}
+				}
+
+				sumP = getSumm(player);
+				if (sumP == 21) {
+					alert ("Блэкджек!" + getSumm(player));
+					break;
+				} else if (sumP > 21) {
+					alert ("Перебор!" + getSumm(player));
+					break;
+				} 
+
+			} while	(answer == '1')
+		}
+
+		sumP = getSumm(player);
+		sumВ = getSumm(dealer);
+
+		if(sumD > sumP) {
+			alert('Ты проиграл!' + getSumm(player));
+		} else {
+				alert('Ты выиграл!' + getSumm(player));
+		}
+
+		answer = prompt("Сыгрыем еще? (1 - да, иначе нет)");
+
+	} while (answer == 1);
 </script>
