@@ -2,12 +2,13 @@
 <html lang="ru">
 
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <title>Guns shop</title>
 </head>
 
 <body>
-    <ul>
+    <ul class="menu">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="contacts.html">Контакты</a></li>
@@ -17,15 +18,16 @@
     <center>
         <h2>Каталог</h2>
     </center>
-    <p>
-        <img src="img/mp153.jpg" alt="МР 153" width="200">
-        <br>
-        <a href="catalog/mp153.html">МР&nbsp;153</a>
+    <p> <!-- Здесь текст с картинкой отображаются без лишних пробелов-->
+        <a href="catalog/mp153.html"><img class="cat_img" src="img/mp153.jpg" alt="МР 153"><br>МР&nbsp;153
+        </a>
     </p>
-    <p>
-        <img src="img/ig27.jpg" alt="ИЖ 27" width="200">
-        <br>
-        <a href="catalog/ij27.html">ИЖ&nbsp;27</a>
+    <p> <!--Здесь после картинки будет маленькое нижнее подчеркивание, как будто там пробел стоит.
+            В строку писать код не читабельно, но похоже придется-->
+        <a href="catalog/ij27.html">
+            <img class="cat_img" src="img/ig27.jpg" alt="ИЖ 27" width="200">
+            <br>ИЖ&nbsp;27
+        </a>
     </p>
     <hr>
     <p>
