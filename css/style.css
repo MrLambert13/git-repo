@@ -108,5 +108,9 @@ textarea {
 
 .menu li a {
 
+    color: #699600;
+}
+.menu li a:hover {
+
     color: #90f;
 }
