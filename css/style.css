@@ -91,6 +91,15 @@ textarea {
     font-weight: 200;
     line-height: 13px;
 }
+.logo{
+    height: 100px;
+    float: left;
+    
+}
+.header {
+    background: #91a199;
+    height: 100px;
+}
 
 .heading3 h3 {
     /*Заголовки разделов на странице описания товара*/
@@ -108,9 +117,10 @@ textarea {
 
 .menu li a {
 
-    color: #699600;
+    color: #00994d;
 }
+
 .menu li a:hover {
 
-    color: #90f;
+    color: #000;
 }
