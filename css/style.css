@@ -24,7 +24,7 @@ input[type="email"] {
     font-size: 13px;
     font-family: Tahoma;
     font-style: italic;
-
+    text-transform: capitalize;
     /*закругление углов*/
     border-radius: 8px;
 }
