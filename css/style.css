@@ -27,9 +27,11 @@ input[type="email"] {
 
     /*закругление углов*/
     border-radius: 8px;
+}
 
-    /*цвет шрифта при вводе*/
+input[type="email"]:focus {
     color: #00f;
+    background-color: #ffe400;
 }
 
 .prod_img {
@@ -91,17 +93,19 @@ textarea {
     font-weight: 200;
     line-height: 13px;
 }
-.logo{
+
+.logo {
     height: 100px;
     float: left;
-    
+
 }
+
 .header {
     background: #91a199;
     height: 100px;
 }
 
-.footer{
+.footer {
     text-align: center;
 }
 
@@ -120,11 +124,9 @@ textarea {
 }
 
 .menu li a {
-
-    color: #00994d;
+    color: #115c36;
 }
 
 .menu li a:hover {
-
     color: #000;
 }
