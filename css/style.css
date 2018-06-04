@@ -97,6 +97,13 @@ textarea {
     text-indent: 20px;
 }
 
+.shortdescription:first-letter,
+.fulldescription:first-letter{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #0a0;
+}
+
 .mod li {
     /*Модификации, цвета товара*/
     list-style: circle;
