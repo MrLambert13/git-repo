@@ -24,12 +24,17 @@ input[type="email"] {
     font-size: 13px;
     font-family: Tahoma;
     font-style: italic;
-    text-transform: capitalize;
     /*закругление углов*/
     border-radius: 8px;
 }
 
+input[name="name"] {
+    /*в поле имя каждое слово с большой буквы*/
+    text-transform: capitalize;
+}
+
 input[type="email"]:focus {
+    /*в поле е-мейл при вводе другой цвет текста и фона*/
     color: #00f;
     background-color: #ffe400;
 }
@@ -43,8 +48,8 @@ input[type="email"]:focus {
 }
 
 .prod_img:hover {
-    border-color: #f8f8f8;
     /*цвет должен превратится в цвет фона*/
+    border-color: #f8f8f8;
 }
 
 .cat_img {
@@ -54,14 +59,14 @@ input[type="email"]:focus {
 
 .t_character {
     /*стиль таблицы характеристик*/
-    border-collapse:inherit;
-    
+    border-collapse: inherit;
+
     color: #260096;
     font-family: monospace;
     font-size: 14px;
     font-weight: 200;
     line-height: 13px;
-    
+
 }
 
 .t_character td {
@@ -69,26 +74,34 @@ input[type="email"]:focus {
     border: 1px solid #000;
     padding: 3px;
     text-align: center;
-    
+
 }
 
 .t_character tr:first-child {
+    /*первая строка таблицы характеристик*/
     height: 34px;
     background: #9c9c9c;
 }
 
+/*=========скругление угловых ячеек, для красоты=========*/
+
 .t_character tr:first-child td:first-child {
     border-top-left-radius: 10px;
 }
+
 .t_character tr:first-child td:last-child {
     border-top-right-radius: 10px;
 }
+
 .t_character tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
 }
+
 .t_character tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
+
+/*======================================================*/
 
 textarea {
     border-width: 2px;
@@ -96,6 +109,7 @@ textarea {
 }
 
 .intro {
+    /*вступление на главной странице*/
     text-indent: 50px;
     text-align: justify;
 }
@@ -145,9 +159,9 @@ textarea {
 }
 
 .logo {
+/*логотип сайта*/
     height: 100px;
     float: left;
-
 }
 
 .header {
@@ -171,6 +185,7 @@ textarea {
     font-style: bold;
     font-size: 22px;
     list-style-type: none;
+    display: inline;
 }
 
 .menu li a {
