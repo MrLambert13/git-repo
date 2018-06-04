@@ -47,6 +47,19 @@ input[type="email"]:focus {
     width: 200px;
 }
 
+.t_character {
+    border-collapse: collapse;
+    color: #260096;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 13px;
+}
+.t_character td{
+    border: 1px solid #000;
+    padding: 3px;
+}
+
 textarea {
     border-width: 2px;
     border-color: #f00;
