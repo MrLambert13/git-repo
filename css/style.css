@@ -42,12 +42,18 @@ input[type="email"]:focus {
     width: 200px;
 }
 
+.prod_img:hover {
+    border-color: #f8f8f8;
+    /*цвет должен превратится в цвет фона*/
+}
+
 .cat_img {
     /*изображения в каталоге*/
     width: 200px;
 }
 
 .t_character {
+    /*стиль таблицы характеристик*/
     border-collapse: collapse;
     color: #260096;
     font-family: monospace;
@@ -55,7 +61,9 @@ input[type="email"]:focus {
     font-weight: 200;
     line-height: 13px;
 }
-.t_character td{
+
+.t_character td {
+    /*стиль ячеек таблицы характеристик*/
     border: 1px solid #000;
     padding: 3px;
 }
