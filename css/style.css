@@ -101,6 +101,10 @@ textarea {
     height: 100px;
 }
 
+.footer{
+    text-align: center;
+}
+
 .heading3 h3 {
     /*Заголовки разделов на странице описания товара*/
     color: #000;
