@@ -158,15 +158,28 @@ textarea {
     line-height: 13px;
 }
 
-.logo {
-/*логотип сайта*/
-    height: 100px;
-    float: left;
-}
-
 .header {
     background: #91a199;
     height: 100px;
+    /*    для переворота*/
+    display: flex;
+
+}
+
+.logo {
+    /*    для переворота*/
+    transition: 1s;
+}
+
+.logo:hover {
+    transform: rotateY(180deg);
+}
+
+
+.logo_img {
+    /*логотип сайта - картинка*/
+    height: 100px;
+    float: left;
 }
 
 .footer {
