@@ -50,6 +50,7 @@
 
 .menu li a {
     color: #fff;
+    text-decoration: none;
 }
 
 .menu li a:hover {
@@ -82,7 +83,22 @@ body h2 {
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
+    justify-content: center;
+/*    display: flex;*/
 }
+.catalog {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.lot {
+   padding-right: 5px; 
+}
+
+.lot p {
+    text-align: center;
+}
+
 .intro {
     /*вступление на главной странице*/
     text-indent: 50px;
@@ -112,8 +128,10 @@ input[type="email"]:focus {
 }
 
 .map{
+    padding: 0px;
     width: 100%;
     height: 374px;
+    
 }
 .prod_img {
     /*рамка вокруг картинке на странице товара*/
@@ -131,6 +149,7 @@ input[type="email"]:focus {
 .cat_img {
     /*изображения в каталоге*/
     width: 200px;
+    clear: both;
 }
 
 .t_character {
