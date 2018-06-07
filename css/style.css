@@ -1,8 +1,63 @@
 .container {
-    width: 1200px;
+    width: 1000px;
     background-color: #f8f8f8;
     margin: 0 auto;
 }
+
+.header {
+    background: #91a199;
+    height: 150px;
+    background-image: url(img/header_bgi.png);
+
+    /*    для переворота*/
+    display: flex;
+    justify-content: space-between;
+    /*perspective: 500px;*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    /*    для переворота*/
+    transition: 1s;
+}
+
+.logo:hover {
+    transform: rotateY(180deg);
+}
+
+
+.logo_img {
+    /*логотип сайта - картинка*/
+    height: 100px;
+    float: left;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    width: 130px;
+    line-height: 40px;
+    font-style: bold;
+    font-size: 22px;
+    list-style-type: none;
+
+}
+
+.menu li a {
+    color: #fff;
+}
+
+.menu li a:hover {
+    color: #000;
+    background-color: #2DB63E;
+}
+
+
 /*
 body {
    background-color: #f8f8f8; 
@@ -22,6 +77,16 @@ body h2 {
     color: #000;
     text-align: center;
 
+}
+.content {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.intro {
+    /*вступление на главной странице*/
+    text-indent: 50px;
+    text-align: justify;
 }
 
 input[type="text"],
@@ -46,6 +111,10 @@ input[type="email"]:focus {
     background-color: #ffe400;
 }
 
+.map{
+    width: 100%;
+    height: 374px;
+}
 .prod_img {
     /*рамка вокруг картинке на странице товара*/
     border: 2px;
@@ -115,12 +184,6 @@ textarea {
     border-color: #f00;
 }
 
-.intro {
-    /*вступление на главной странице*/
-    text-indent: 50px;
-    text-align: justify;
-}
-
 .shortdescription {
     /*Краткое описание товара*/
     color: #707070;
@@ -165,34 +228,6 @@ textarea {
     line-height: 13px;
 }
 
-.header {
-    background: #91a199;
-    height: 100px;
-    /*    для переворота*/
-    display: flex;
-
-}
-
-.logo {
-    /*    для переворота*/
-    transition: 1s;
-}
-
-.logo:hover {
-    transform: rotateY(180deg);
-}
-
-
-.logo_img {
-    /*логотип сайта - картинка*/
-    height: 100px;
-    float: left;
-}
-
-.footer {
-    text-align: center;
-}
-
 .heading3 h3 {
     /*Заголовки разделов на странице описания товара*/
     color: #000;
@@ -201,17 +236,15 @@ textarea {
     background-color: #eaeaea;
 }
 
-.menu li {
-    font-style: bold;
-    font-size: 22px;
-    list-style-type: none;
-    display: inline;
-}
 
-.menu li a {
-    color: #115c36;
-}
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-right: 10px;
+    height: 40px;
+    background-color: #004A00;
+    color: #52B65E;
 
-.menu li a:hover {
-    color: #000;
 }
