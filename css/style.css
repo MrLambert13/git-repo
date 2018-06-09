@@ -71,6 +71,8 @@ body h3 {
     font-size: 18px;
     font-weight: 400;
     background-color: #eaeaea;
+    overflow: hidden;
+
 }
 
 body h2 {
@@ -243,7 +245,7 @@ textarea {
     font-style: italic;
     line-height: 16px;
     text-indent: 20px;
-/*    display: block;*/
+    /*    display: block;*/
 }
 
 .fulldescription {
